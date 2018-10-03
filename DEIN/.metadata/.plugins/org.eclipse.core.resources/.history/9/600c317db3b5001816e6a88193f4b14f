@@ -1,0 +1,12 @@
+import javax.swing.JFrame;
+
+public class Eje1 extends JFrame{
+
+	
+	Eje1(){
+		
+		
+		this.setVisible(true);
+	}
+	
+}

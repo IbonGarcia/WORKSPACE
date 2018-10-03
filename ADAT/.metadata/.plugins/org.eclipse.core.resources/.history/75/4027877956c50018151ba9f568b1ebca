@@ -1,0 +1,19 @@
+package Modelo;
+
+public enum EstadoLibro {
+
+	NUEVO("Nuevo"),
+	USADONUEVO("Usado nuevo"),
+	USADOSEMINUEVO("Usado seminuevo"),
+	USADOESTROPEADO("Usado estropeado"),
+	RESTAURADO("Restaurado");
+	
+	private String estado;
+	
+	EstadoLibro(String estado){
+		
+		this.estado=estado;
+		
+	}
+	
+}

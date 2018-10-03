@@ -1,0 +1,53 @@
+package tanda2;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+
+public class Ejercicio3a extends JFrame{
+
+	private JScrollPane scroll;
+	private JButton buy;
+	private JList<String> lista;
+	private DefaultListModel<String> modelo1;
+	
+	public Ejercicio3a() {
+		
+		
+		
+		modelo1= new DefaultListModel<String>();
+		cargarLista();
+		buy= new JButton("Buy Apple");
+		lista=new JList<String>(modelo1);
+		scroll=new JScrollPane(lista);
+		
+		this.getContentPane().add(scroll);
+		this.setSize(200, 200);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setVisible(true);
+		tratarEventos();
+	}
+	public void tratarEventos() {
+		
+		
+		
+	}
+	public void cargarLista() {
+		
+		modelo1.addElement("Winesap");
+		modelo1.addElement("Cortland");
+		modelo1.addElement("Red Delicious");
+		modelo1.addElement("Golden Delicious");
+		modelo1.addElement("Gala");
+		modelo1.addElement("Fuji");
+		modelo1.addElement("Pink Lady");
+		modelo1.addElement("Granny Smith");
+		modelo1.addElement("Fuji");
+	}
+	
+	public static void main(String[] args) {
+		Ejercicio3a ej3= new Ejercicio3a();
+	}	
+}

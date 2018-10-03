@@ -1,0 +1,12 @@
+package Binarios;
+
+public class Libro {
+	
+	
+	private int isbn;
+	private String titulo;
+	private String autor;
+	private String genero;
+	private int vendidos;
+
+}

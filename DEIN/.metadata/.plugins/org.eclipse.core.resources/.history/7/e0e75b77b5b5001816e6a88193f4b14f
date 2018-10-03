@@ -1,0 +1,19 @@
+import javax.swing.JFrame;
+
+public class Eje2 extends JFrame{
+
+	Eje2(){
+		
+		
+		//Ventana
+		this.setTitle("Ejemplo de botones");
+		this.setSize(300, 200);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setVisible(true);
+		
+	}
+	public static void main(String[] args) {
+		Eje2 e2= new Eje2();
+	}
+	
+}

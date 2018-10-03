@@ -1,0 +1,38 @@
+package Binarios;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class Leer {
+
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
+		
+		int cont=0;
+		System.out.println("Introduce el genero que buscas");
+		String str=Consola.leeString();
+		while((!str.equals("Amor"))
+				&&(!str.equals("Accion"))
+				&&(!str.equals("Ciencia Ficcion"))) {
+			System.out.println("");
+			System.out.println("El genero introducido no es valido, vuelve a introducirlo");
+			str=Consola.leeString();
+		}
+		
+		FileInputStream fis= new FileInputStream(new File ("Libros.dat"));
+		ObjectInputStream ois= new ObjectInputStream(fis);
+		
+		System.out.println("Resultado de la busqueda:");
+		while(fis.available()!=0){
+			Libro l1=(Libro) ois.readObject();
+			if (l1.getGenero().equals(str)) {
+				
+			}
+			System.out.println(l1);
+			System.out.println();
+		}
+		ois.close();
+	}
+}

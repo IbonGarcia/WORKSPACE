@@ -1,0 +1,14 @@
+package Modelo;
+
+public class Alumno {
+	
+	
+	private String dni;
+	private String nombre;
+	private String ap1;
+	private String ap2;
+
+	public Alumno(String dni,String nom,String ap1,String ap2) {
+		
+	}
+}

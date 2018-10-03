@@ -1,0 +1,32 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) throws IOException {
+		
+		System.out.println("Introduce la ruta del fichero que quieres leer.");
+		String str=Consola.leeString();
+		System.out.println("");
+		String[] nombre=str.split('\\');
+		System.out.println(nombre[nombre.length-1]);
+		
+		BufferedReader br = new BufferedReader( new FileReader(str) );
+			
+		
+		String linea=br.readLine();
+		
+		while( linea!=null) {
+			
+			System.out.println(linea);
+			
+			linea=br.readLine();
+			
+		}
+		br.close();
+		
+	}
+	
+}

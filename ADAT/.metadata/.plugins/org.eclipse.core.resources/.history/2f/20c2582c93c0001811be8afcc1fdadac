@@ -1,0 +1,27 @@
+package Binarios;
+
+import java.io.IOException;
+import javax.sound.midi.Synthesizer;
+
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
+
+public class Ejercicio6 {
+
+	public static void main(String[] args) {
+		
+		SAXBuilder parseador= new SAXBuilder();
+		try {
+			
+			parseador.build("LibrosStream.xml");
+			System.out.println(parseador.toString());
+			
+		} catch (JDOMException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+}

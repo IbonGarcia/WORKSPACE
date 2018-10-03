@@ -1,0 +1,17 @@
+package Visual;
+
+import javax.swing.JFrame;
+
+public class Ventana_Principal extends JFrame{
+	
+	public Ventana_Principal() {
+		
+		
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	}
+	
+	public static void main(String[] args) {
+		new Ventana_Principal();
+	}
+
+}

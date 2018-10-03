@@ -1,0 +1,8 @@
+import javax.swing.JFrame;
+
+public class Eje2 extends JFrame{
+
+	Eje2(){
+	}
+	
+}

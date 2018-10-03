@@ -1,0 +1,13 @@
+package Binarios;
+
+public class Ejercicios {
+	
+	public static void main(String[] args) {
+		
+		char respuesta=' ';
+		System.out.println("¿Desea introducir un libro?");
+		respuesta=Consola.leeChar();
+		
+	}
+
+}

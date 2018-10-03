@@ -1,0 +1,14 @@
+package Binarios;
+
+import org.jdom2.input.SAXBuilder;
+
+public class Ejercicio6 {
+
+	public static void main(String[] args) {
+		
+		SAXBuilder parseador= new SAXBuilder();
+		parseador.build("LibrosStream.xml");
+		
+	}
+	
+}

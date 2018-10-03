@@ -1,0 +1,11 @@
+package Modelo;
+
+public class Alumno {
+	
+	
+	private Sring dni;
+	private String nombre;
+	private String ap1;
+	private String ap2;
+
+}

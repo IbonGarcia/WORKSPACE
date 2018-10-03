@@ -1,0 +1,54 @@
+package Binarios;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
+
+public class Ejercicio4 {
+	
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
+		
+		Element raiz= new Element("Libros");
+		Document doc= new Document(raiz);
+		
+		FileInputStream fis= new FileInputStream(new File ("Libros.dat"));
+		ObjectInputStream ois= new ObjectInputStream(fis);
+		while(fis.available()!=0){
+			
+				Libro l1=(Libro)ois.readObject();
+				System.out.println(l1);
+				System.out.println();
+				Element libro= new Element("Libro");
+				Element isbn= new Element("ISBN");
+				Element titulo= new Element("titulo");
+				Element autor= new Element("autor");
+				Element genero= new Element("genero");
+				Element vendidos= new Element("vendidos");
+				
+				isbn.setText(l1.getIsbn()+"");
+				titulo.setText(l1.getTitulo());
+				autor.setText(l1.getAutor());
+				genero.setText(l1.getGenero());
+				vendidos.setText(l1.getVendidos()+"");
+	
+				libro.addContent(isbn);	
+				libro.addContent(titulo);	
+				libro.addContent(autor);	
+				libro.addContent(genero);
+				libro.addContent(vendidos);
+		}
+		XMLOutputter escritor= new XMLOutputter(Format.getPrettyFormat());
+		escritor.output(doc, new FileWriter("Libros.xml"));
+		ois.close();
+	}
+
+}

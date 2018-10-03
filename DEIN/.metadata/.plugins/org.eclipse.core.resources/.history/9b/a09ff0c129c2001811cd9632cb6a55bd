@@ -1,0 +1,52 @@
+package tanda2;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Ejercicio3cpeliculas extends JFrame{
+
+	private JTextField tf1;
+	private JComboBox<String> combo;
+	private DefaultComboBoxModel<String>modelo1;
+	private JButton añadir;
+	
+	public Ejercicio3cpeliculas() {
+		
+		this.setLayout(new FlowLayout());
+		JLabel etiqueta1= new JLabel("Escribe el titulo de una pelicula");
+		JLabel etiqueta2= new JLabel("Peliculas");
+		tf1= new JTextField(15);
+		modelo1= new DefaultComboBoxModel<String>();
+		combo= new JComboBox<String>(modelo1);
+		
+		
+		this.getContentPane().add(etiqueta1);
+		this.getContentPane().add(etiqueta2);
+		this.getContentPane().add(tf1);
+		this.setSize(500, 200);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		tratarEventos();
+	}
+	
+	public void tratarEventos() {
+		añadir.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+	}
+	
+	public static void main(String[] args) {
+		new Ejercicio3cpeliculas();
+	}
+}

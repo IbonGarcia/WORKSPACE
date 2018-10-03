@@ -1,0 +1,27 @@
+package Binarios;
+
+public class Libro {
+	
+	
+	private int isbn;
+	private String titulo;
+	private String autor;
+	private String genero;
+	private int vendidos;
+	
+	Libro(int isbn, String titu, String auto, String gen, int ven){
+		this.isbn=isbn;
+		this.titulo=titu;
+		this.autor=auto;
+		this.genero=gen;
+		this.vendidos=ven;
+	}
+	
+	public String toString(){
+		String str="ISBN: "+this.isbn+", Titulo: "+this.titulo;
+		
+		return str;
+	}
+	
+
+}

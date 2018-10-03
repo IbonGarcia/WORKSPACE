@@ -1,0 +1,8 @@
+package Binarios;
+
+public class Leer {
+
+	//Esta es una clase para hacer pruebas, con ella se lee y visualiza todo el contenido 
+	//del fichero libros.dat
+	
+}

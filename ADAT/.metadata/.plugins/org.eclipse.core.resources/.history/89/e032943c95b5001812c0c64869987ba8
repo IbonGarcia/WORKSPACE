@@ -1,0 +1,9 @@
+package Binarios;
+
+import java.io.FileInputStream;
+
+public class Leer {
+
+	FileInputStream fis= new FileInputStream(new File ("Libros.dat"));
+	
+}

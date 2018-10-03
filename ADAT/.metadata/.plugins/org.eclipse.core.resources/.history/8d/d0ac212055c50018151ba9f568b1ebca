@@ -1,0 +1,20 @@
+package Modelo;
+
+public class Libro {
+
+	private int codigo;
+	private long isbn;
+	private String titulo;
+	private String autor;
+	private String editorial;
+	private String asignatura;
+	private String estado;
+	
+	public Libro() {
+		
+		
+		
+		
+	}
+	
+}

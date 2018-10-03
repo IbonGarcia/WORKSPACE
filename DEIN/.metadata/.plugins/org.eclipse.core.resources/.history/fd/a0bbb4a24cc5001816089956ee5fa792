@@ -1,0 +1,22 @@
+package tanda3;
+
+import javax.swing.JFrame;
+
+public class Ejercicio2 extends JFrame{
+	
+	public Ejercicio2() {
+		
+		
+		
+		tratarEventos();
+	}
+	
+	public void tratarEventos() {
+		
+	}
+	
+	public static void main(String[] args) {
+		new Ejercicio2();
+	}
+
+}

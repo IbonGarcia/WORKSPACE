@@ -1,0 +1,44 @@
+package BinariosAleatorios;
+
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+public class Leertodos {
+
+public static void main(String[] args) throws IOException {
+		
+		RandomAccessFile raf = new RandomAccessFile("LibrosAle.dat", "r");
+		int cont=1;
+		while (raf.getFilePointer()<raf.length()) {
+			long isbn=raf.readLong();
+			char[] titu= new char[50];
+			for(int i=0;i<50;i++) {
+				titu[i]=raf.readChar();
+			}
+			char[] aut= new char[50];
+			for(int i=0;i<50;i++) {
+				aut[i]=raf.readChar();
+			}
+			char[] gen= new char[15];
+			for(int i=0;i<15;i++) {
+				gen[i]=raf.readChar();
+			}
+			int ven= raf.readInt();
+			String titulo= new String(titu);
+			titulo = titulo.trim();
+			String autor= new String(aut);
+			autor = autor.trim();
+			String genero= new String(gen);
+			genero = genero.trim();
+				
+			Libro l1= new Libro(isbn, titulo, autor, genero, ven);
+			if (l1.getGenero().equals(strgen)) {
+				System.out.println("Libro "+cont);
+				System.out.println(l1.toString());
+				System.out.println("");
+				cont++;
+			}
+		}			
+		raf.close();
+	}	
+}

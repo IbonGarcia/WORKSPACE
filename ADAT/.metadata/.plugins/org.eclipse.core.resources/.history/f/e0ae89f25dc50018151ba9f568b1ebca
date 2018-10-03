@@ -1,0 +1,11 @@
+package Visual;
+
+import javax.swing.JFrame;
+
+public class Ventana_Principal extends JFrame{
+	
+	public static void main(String[] args) {
+		new Vetana_Principal;
+	}
+
+}

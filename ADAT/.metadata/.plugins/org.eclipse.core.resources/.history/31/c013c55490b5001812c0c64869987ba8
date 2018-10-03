@@ -1,0 +1,22 @@
+package Binarios;
+
+public class Ejercicios {
+	
+	public static void main(String[] args) {
+		
+		char respuesta=' ';
+		System.out.println("¿Desea introducir un libro? (s/n)");
+		respuesta=Consola.leeChar();
+		while(respuesta!='n') {
+			System.out.println("Introduce el ISBN");
+			int isbn=Consola.leeInt();
+			System.out.println("Introduce el titulo");
+			String titulo=Consola.leeString();
+			System.out.println("Introduce el autor");
+			String autor=Consola.leeString();
+		}
+		
+		
+	}
+
+}

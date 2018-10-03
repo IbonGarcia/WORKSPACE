@@ -1,0 +1,25 @@
+package Binarios;
+
+import java.io.IOException;
+
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
+
+public class Ejercicio6 {
+
+	public static void main(String[] args) {
+		
+		SAXBuilder parseador= new SAXBuilder();
+		try {
+			parseador.build("LibrosStream.xml");
+		} catch (JDOMException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+}

@@ -1,0 +1,37 @@
+package tanda2;
+
+import java.awt.FlowLayout;
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.table.DefaultTableColumnModel;
+
+public class Ejercicio3c extends JFrame{
+
+	
+	private JComboBox<String> combo;
+	private DefaultComboBoxModel<String> modelo1;	
+	public Ejercicio3c() {
+		
+		this.setLayout(new FlowLayout());
+		
+		
+		this.setTitle("Combo dinamico");
+		this.setSize(200, 200);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		tratarEventos();
+	}
+	public void tratarEventos() {
+		
+	}
+	
+	public void cargarCombo() {
+		
+	}
+	
+	public static void main(String[] args) {
+		Ejercicio3c ej3= new Ejercicio3c();
+	}
+}

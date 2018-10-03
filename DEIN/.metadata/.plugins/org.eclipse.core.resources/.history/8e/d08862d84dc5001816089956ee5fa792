@@ -1,0 +1,43 @@
+package tanda3;
+
+import javax.swing.BoxLayout;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Ejercicio2 extends JFrame{
+
+	private JCheckBox habilitado;
+	private JCheckBox velocidad;
+	private JCheckBox tamaño;
+	private JCheckBox debug;
+	
+	
+	public Ejercicio2() {
+		
+		this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
+		
+		habilitado= new JCheckBox("Habilita opciones");
+		JLabel eti1= new JLabel("Opciones:");
+		velocidad= new JCheckBox("Mayor velocidad");
+		velocidad.setEnabled(false);
+		
+		this.getContentPane().add(habilitado);
+		this.getContentPane().add(eti1);
+		
+		this.setTitle("Cajas de texto");
+		this.setSize(350,250);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		tratarEventos();
+	}
+	
+	public void tratarEventos() {
+		
+	}
+	
+	public static void main(String[] args) {
+		new Ejercicio2();
+	}
+
+}

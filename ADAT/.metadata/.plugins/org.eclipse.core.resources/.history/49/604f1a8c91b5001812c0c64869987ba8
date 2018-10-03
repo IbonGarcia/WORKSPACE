@@ -1,0 +1,43 @@
+package Binarios;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class Ejercicios {
+	
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		FileOutputStream fio = new FileOutputStream("Libros.dat");
+		char respuesta=' ';
+		System.out.println("¿Desea introducir un libro? (s/n)");
+		respuesta=Consola.leeChar();
+		
+		while(respuesta!='n') {
+			System.out.println("Introduce el ISBN");
+			int isbn=Consola.leeInt();
+			System.out.println("Introduce el titulo");
+			String titulo=Consola.leeString();
+			System.out.println("Introduce el autor");
+			String autor=Consola.leeString();
+			System.out.println("Introduce el genero (Amor, Accion o Ciencia Ficcion)");
+			String genero=Consola.leeString();
+			
+			while ((genero!="Amor")&&(genero!="Accion")&&(genero!="Ciencia Ficcion")) {
+				System.out.println("El genero introducido es incorrecto vuelve a introducirlo (Amor, Accion o Ciencia Ficcion)");
+				genero=Consola.leeString();
+			}
+			
+			System.out.println("Introduce la cantidad de ventas");
+			int ventas=Consola.leeInt();
+			Libro l1=new Libro(isbn, titulo, autor, genero, ventas);
+			System.out.println(l1);
+			
+			
+			
+			System.out.println("¿Desea introducir otro libro?");
+			respuesta=Consola.leeChar();
+		}
+		
+	}
+
+}

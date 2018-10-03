@@ -1,0 +1,12 @@
+
+public class Actividad10 {
+	
+	public static void main(String[] args) {
+		
+		Runtime run	= Runtime.getRuntime();
+		Process proceso=null;
+		String comando="java Ejemplo2.class";
+		
+	}
+
+}

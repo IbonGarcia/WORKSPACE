@@ -1,0 +1,24 @@
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Eje1 extends JFrame{
+
+	
+	Eje1(){
+		
+		this.setLayout(null);
+		JLabel etiqueta1= new JLabel("Hola colega");
+		etiqueta1.setBounds(160,200,100,25);
+		
+		//Ventana
+		this.getContentPane().add(etiqueta1);
+		this.setSize(300,200);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	}
+	
+	public static void main(String[] args) {
+		Eje1 e1 = new Eje1();
+	}
+	
+}

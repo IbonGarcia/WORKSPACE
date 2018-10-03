@@ -1,0 +1,13 @@
+import javax.swing.JFrame;
+
+public class Eje2 extends JFrame{
+
+	Eje2(){
+		
+		
+		//Ventana
+		this.setVisible(true);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	}
+	
+}

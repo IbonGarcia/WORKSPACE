@@ -1,0 +1,20 @@
+import javax.swing.JFrame;
+
+public class Eje1 extends JFrame{
+
+	
+	Eje1(){
+		
+		//Ventana
+		
+		
+		this.setSize(400,400);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	}
+	
+	public static void main(String[] args) {
+		Eje1 e1 = new Eje1();
+	}
+	
+}

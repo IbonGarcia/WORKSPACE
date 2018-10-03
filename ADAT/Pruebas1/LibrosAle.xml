@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Libros>
+  <Libro ID="1227">
+    <ISBN>1724130170</ISBN>
+    <titulo>Amanecer rojo</titulo>
+    <autor>Pierce Brown</autor>
+    <genero>Amor</genero>
+    <vendidos>8054</vendidos>
+  </Libro>
+  <Libro ID="1254">
+    <ISBN>438711607</ISBN>
+    <titulo>Las dos torres</titulo>
+    <autor>Tolkien</autor>
+    <genero>Accion</genero>
+    <vendidos>2015789</vendidos>
+  </Libro>
+  <Libro ID="1281">
+    <ISBN>-846706956</ISBN>
+    <titulo>El hobbit</titulo>
+    <autor>Tolkien</autor>
+    <genero>Accion</genero>
+    <vendidos>98789541</vendidos>
+  </Libro>
+  <Libro ID="1308">
+    <ISBN>877423214</ISBN>
+    <titulo>Mañana azul</titulo>
+    <autor>Pierce Brown</autor>
+    <genero>Amor</genero>
+    <vendidos>98504</vendidos>
+  </Libro>
+  <Libro ID="1335">
+    <ISBN>-1285418554</ISBN>
+    <titulo>Diez negritos</titulo>
+    <autor>Agatha Crhistie</autor>
+    <genero>Ciencia Ficcion</genero>
+    <vendidos>221154</vendidos>
+  </Libro>
+  <Libro ID="1362">
+    <ISBN>940434640</ISBN>
+    <titulo>Hijo dorado</titulo>
+    <autor>Pierce Brown</autor>
+    <genero>Amor</genero>
+    <vendidos>568704</vendidos>
+  </Libro>
+  <Libro ID="1389">
+    <ISBN>-971940373</ISBN>
+    <titulo>Estudio escarlata</titulo>
+    <autor>Arthur</autor>
+    <genero>Ciencia Ficcion</genero>
+    <vendidos>456900</vendidos>
+  </Libro>
+  <Libro ID="1416">
+    <ISBN>1567391100</ISBN>
+    <titulo>El retorno del rey</titulo>
+    <autor>Tolkien</autor>
+    <genero>Accion</genero>
+    <vendidos>789458</vendidos>
+  </Libro>
+</Libros>

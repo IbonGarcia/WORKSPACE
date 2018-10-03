@@ -1,0 +1,14 @@
+import javax.swing.JFrame;
+
+public class Eje1 extends JFrame{
+
+	
+	Eje1(){
+		
+		//Ventana
+		
+		this.setSize(200, 200);
+		this.setVisible(true);
+	}
+	
+}

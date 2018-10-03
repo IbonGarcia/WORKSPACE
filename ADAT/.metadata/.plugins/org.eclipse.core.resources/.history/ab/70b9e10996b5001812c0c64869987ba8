@@ -1,0 +1,30 @@
+package Binarios;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class Leer {
+
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
+		
+		System.out.println("HOLA");
+		FileInputStream fis= new FileInputStream(new File ("Libros.dat"));
+		ObjectInputStream ois= new ObjectInputStream(fis);
+		
+		Libro l1=(Libro)ois.readObject();
+		System.out.println(l1);
+		while(ois.available()!=0){
+			
+			l1=(Libro)ois.readObject();
+			System.out.println(l1);
+			System.out.println();
+		}
+		
+		ois.close();
+		
+	}
+	
+}

@@ -1,0 +1,318 @@
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Eje3 extends JFrame{
+
+	//Menu
+	private JButton a;
+	private JButton b;
+	private JButton c;
+	private JButton d;
+	private JButton e;
+	private JButton f;
+	private JButton g;
+	private JButton h;
+	private JButton i;
+	private JTextField tf1;
+	
+	//Apartado A
+	private JTextField tf2;
+	private JLabel etiquetaA;
+	
+	//Apartado B
+	private JLabel todotexto;
+	private JLabel seleccionado;
+	private JButton cortar;
+	private JButton pegar;
+	private String strcortar;
+	
+	//Apartado C
+	private JFrame frameC;
+	private JButton aceptarC;
+	private JButton cancelarC;
+	private JLabel etiquetaC;
+	private int contaños;
+	private int añoactual;
+	
+	public Eje3() {
+		
+		this.setLayout(new FlowLayout());
+		
+		a=new JButton(" A ");
+		b=new JButton(" B ");
+		c=new JButton(" C ");
+		d=new JButton(" D ");
+		e=new JButton(" E ");
+		f=new JButton(" F ");
+		g=new JButton(" G ");
+		h=new JButton(" H ");
+		i=new JButton(" I ");
+		JLabel etiqueta=new JLabel("Elije un apartado");				
+		
+		//Ventana principal 'menu'
+		this.getContentPane().add(a);
+		this.getContentPane().add(b);
+		this.getContentPane().add(c);
+		this.getContentPane().add(d);
+		this.getContentPane().add(e);
+		this.getContentPane().add(f);
+		this.getContentPane().add(g);
+		this.getContentPane().add(h);
+		this.getContentPane().add(i);
+		
+		this.getContentPane().add(etiqueta);
+		this.setTitle("Ejercicio 3");
+		this.setSize(300,160);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setVisible(true);
+		tratarEventos();				
+	}
+	
+	public void tratarEventos() {
+		
+		a.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+						
+				setVisible(false);
+				dibujarA();
+			}
+		});
+		b.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				setVisible(false);
+				dibujarB();		
+			}
+		});
+		c.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+						
+				setVisible(false);
+				dibujarC();		
+			}
+		});
+		
+	}
+	public void dibujarA() {
+		JFrame frameA=new JFrame(" A ");
+		
+		frameA.setLayout(new FlowLayout());
+		tf1= new JTextField(10);
+		tf2= new JTextField(10);
+		etiquetaA= new JLabel("");
+		//Ventana
+		frameA.setSize(300, 100);
+		frameA.getContentPane().add(tf1);
+		frameA.getContentPane().add(tf2);
+		frameA.getContentPane().add(etiquetaA);
+		frameA.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		frameA.setVisible(true);
+		
+		//Esto hace visible la ventana principal cuando cerramos la ventana 'A'
+		frameA.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				setVisible(true);
+			}
+		});
+		tratarA();
+	}
+	public void dibujarB() {
+		JFrame frameB=new JFrame(" B ");
+		
+		frameB.setLayout(new FlowLayout());
+		tf1= new JTextField(15);
+		todotexto=new JLabel("Todo el texto: ");
+		seleccionado= new JLabel("Texto selecionado: Null");
+		cortar= new JButton("Cortar");
+		pegar= new JButton("Pegar");
+		//Ventana
+		frameB.setSize(215, 250);
+		frameB.getContentPane().add(tf1);
+		frameB.getContentPane().add(cortar);
+		frameB.getContentPane().add(pegar);
+		frameB.getContentPane().add(todotexto);
+		frameB.getContentPane().add(seleccionado);
+		frameB.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		frameB.setVisible(true);
+		
+		//Esto hace visible la ventana principal cuando cerramos la ventana 'B'
+		frameB.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+					setVisible(true);
+					}
+				});
+		tratarB();
+	}
+	public void dibujarC() {
+		frameC=new JFrame(" C ");
+		añoactual=0;
+		contaños=0;
+		frameC.setLayout(null);
+		aceptarC=new JButton("Aceptar");
+		aceptarC.setBounds(188, 95,85,20);
+		aceptarC.setBackground(Color.getHSBColor(1.6f,0.5f,0.9f));
+		cancelarC=new JButton("Cancelar");
+		cancelarC.setBounds(90, 95,85,20);
+		tf1= new JTextField();
+		tf1.setBounds(75, 60, 200, 20);
+		etiquetaC= new JLabel("Año actual");
+		etiquetaC.setBounds(75,20,150,40);
+		JLabel icono= new JLabel(new ImageIcon("java.png"));
+		icono.setBounds(20, 10, 50, 80);
+		
+		//Ventana
+		frameC.setSize(350, 200);
+		frameC.getContentPane().add(icono);
+		frameC.getContentPane().add(etiquetaC);
+		frameC.getContentPane().add(tf1);
+		frameC.getContentPane().add(cancelarC);
+		frameC.getContentPane().add(aceptarC);
+		frameC.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		frameC.setVisible(true);
+		//Esto hace visible la ventana principal cuando cerramos la ventana 'B'
+		frameC.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				setVisible(true);
+			}
+		});
+		tratarC();
+	}
+	public void tratarA() {
+		
+		tf1.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				String str=tf1.getText();
+				etiquetaA.setText("Ha pulsado enter en jtf1: "+str);
+			}
+		});
+		tf2.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				String str=tf2.getText();
+				etiquetaA.setText("Ha pulsado enter en jtf2: "+str);
+			}
+		});
+	}
+	public void tratarB() {
+		tf1.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent arg0) {
+				String str=tf1.getText();
+				todotexto.setText("Todo el texto: "+str);
+			}
+		});
+		cortar.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				//Para 'cortar' usamos el metodo getSelectedText, y despues tenemos que guardar todo
+				//el string en una variable, sobre esa variable usamos indexOf para saber en que posicion
+				//empieza el string selecionado
+				strcortar=tf1.getSelectedText();
+				String completo=tf1.getText();
+				seleccionado.setText("Texto seleccionado: "+strcortar);
+				int indice=completo.indexOf(strcortar);
+				//Guardamos en una variable auxiliar el string desde la posicion 0 hasta el indice
+				//que hemos obtenido antes, y luego en otra variable guardamos desde el 
+				//el indice + la largura del texto seleccionado hasta el final.
+				String aux= completo.substring(0,indice);
+				String aux2=completo.substring(indice+strcortar.length());
+				tf1.setText(aux+aux2);
+			}
+		});
+		pegar.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				//Para 'pegar' de nuvo cojemos la posicion del cursor con el metodo
+				//getCaretPosition y lo guardamos en un int, depues guardamos en un string desde
+				//dese la posicion 0 hasta la de el cursor, y en otro string guardamos desde la 
+				//posicion del cursor hasta el final, despues concatenamos el primer string seguido
+				//del texto a copiar seguido del string que va hasta el final.
+				int cursor=tf1.getCaretPosition();
+				String completo=tf1.getText();
+				String aux=completo.substring(0, cursor);
+				String aux1=completo.substring(cursor);
+				String auxcompleto= aux+strcortar+aux1;
+				tf1.setText(auxcompleto);
+			}
+		});
+	}
+	public void tratarC() {
+		
+		cancelarC.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tf1.setText("");
+			}
+		});
+		aceptarC.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+						
+				if (contaños==0) {
+					añoactual = Integer.parseInt(tf1.getText());
+					etiquetaC.setText("Año nacimiento");
+					tf1.setText("");
+					System.out.println(añoactual);
+					contaños++;
+				}
+				else {
+					int añonac = Integer.parseInt(tf1.getText());
+					frameC.setVisible(false);
+					VentanaCdos vc2= new VentanaCdos(true, añoactual, añonac);
+				}					
+			}
+		});
+	}
+	//Esto es una clase interna para crear la segunda ventana que sale en el apartado C
+	class VentanaCdos extends JFrame{
+		
+				
+		VentanaCdos(boolean visible,int actual,int nacimiento) {
+			
+			this.setLayout(null);
+			int diferencia=(actual-nacimiento);
+			JLabel icono= new JLabel(new ImageIcon("java.png"));
+			icono.setBounds(20, 10, 50, 80);
+			JLabel e1= new JLabel("Tienes:");
+			e1.setBounds(85,15,150,40);
+			JLabel e2= new JLabel(diferencia+" Años cumplidos");
+			e2.setBounds(85,30,150,40);
+			JLabel e3= new JLabel((diferencia*12)+" Meses");
+			e3.setBounds(85,45,150,40);
+			JLabel e4= new JLabel((diferencia*12)*365+" Dias");
+			e4.setBounds(85,60,150,40);
+			JLabel e5= new JLabel((diferencia*12)*365*24+" Horas");
+			e5.setBounds(85,75,150,40);
+			JLabel e6= new JLabel((diferencia*12)*365*24*60+" Horas");
+			e6.setBounds(85,75,150,40);
+			
+			//Ventana
+			this.getContentPane().add(icono);
+			this.getContentPane().add(e1);
+			this.getContentPane().add(e2);
+			this.getContentPane().add(e3);
+			this.getContentPane().add(e4);
+			this.setSize(350, 200);
+			this.setVisible(visible);
+			this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+			
+			this.addWindowListener(new WindowAdapter() {
+				public void windowClosing(WindowEvent e) {
+					frameC.setVisible(true);
+				}
+			});
+		}
+	}
+	public static void main(String[] args) {
+		Eje3 e3 = new Eje3();
+	}	
+}

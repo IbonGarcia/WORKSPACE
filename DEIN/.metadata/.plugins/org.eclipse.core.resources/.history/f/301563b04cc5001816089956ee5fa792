@@ -1,0 +1,24 @@
+package tanda3;
+
+import javax.swing.JFrame;
+
+public class Ejercicio2 extends JFrame{
+	
+	public Ejercicio2() {
+		
+		
+		this.setSize(300, 250);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		tratarEventos();
+	}
+	
+	public void tratarEventos() {
+		
+	}
+	
+	public static void main(String[] args) {
+		new Ejercicio2();
+	}
+
+}

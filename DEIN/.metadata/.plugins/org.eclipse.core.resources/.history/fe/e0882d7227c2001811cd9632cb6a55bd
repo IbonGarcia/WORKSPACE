@@ -1,0 +1,28 @@
+package tanda2;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+
+public class Ejercicio3c extends JFrame{
+
+	
+	public Ejercicio3c() {
+		
+		this.setLayout(new FlowLayout());
+		
+		
+		this.setTitle("Combo dinamico");
+		this.setSize(200, 200);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		tratarEventos();
+	}
+	public void tratarEventos() {
+		
+	}
+	
+	public static void main(String[] args) {
+		Ejercicio3c ej3= new Ejercicio3c();
+	}
+}

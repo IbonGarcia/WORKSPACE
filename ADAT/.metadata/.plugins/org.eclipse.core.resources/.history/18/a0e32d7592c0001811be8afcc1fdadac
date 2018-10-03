@@ -1,0 +1,21 @@
+<Libro>
+  <isbn>757575</isbn>
+  <titulo>Origen</titulo>
+  <autor>Dawn Brown</autor>
+  <genero>Accion</genero>
+  <vendidos>25641543</vendidos>
+</Libro>
+<Libro>
+  <isbn>808080</isbn>
+  <titulo>Amanecer rojo</titulo>
+  <autor>Pierce Brwon</autor>
+  <genero>Amor</genero>
+  <vendidos>1254</vendidos>
+</Libro>
+<Libro>
+  <isbn>404040</isbn>
+  <titulo>Harry Potter y el principe mestizo</titulo>
+  <autor>Unai Diaz</autor>
+  <genero>Ciencia Ficcion</genero>
+  <vendidos>67548154</vendidos>
+</Libro>

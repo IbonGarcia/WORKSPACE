@@ -1,0 +1,26 @@
+package Visual;
+
+import javax.swing.BoxLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Ventana_Principal extends JFrame{
+	
+	public Ventana_Principal() {
+		
+		this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
+		JLabel etitulo=new JLabel("Gestión de préstramos de libros");
+		
+		
+		this.getContentPane().add(etitulo);
+		this.setTitle("Gestión de Préstamos de Libros");
+		this.setSize(750,750);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	}
+	
+	public static void main(String[] args) {
+		new Ventana_Principal();
+	}
+
+}

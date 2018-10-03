@@ -1,0 +1,31 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Eje2 extends JFrame{
+
+	private JButton b1;
+	private JButton b2;
+	
+	Eje2(){
+		
+		this.setLayout(null);
+		b1=new JButton("Primero");
+		b1.setBounds(120,100,120,50);
+		b2=new JButton("Segundo");
+		b1.setBounds(182,100,60,25);
+		
+		
+		//Ventana
+		this.getContentPane().add(b1);
+		this.getContentPane().add(b2);
+		this.setTitle("Ejemplo de botones");
+		this.setSize(600, 200);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setVisible(true);
+		
+	}
+	public static void main(String[] args) {
+		Eje2 e2= new Eje2();
+	}
+	
+}

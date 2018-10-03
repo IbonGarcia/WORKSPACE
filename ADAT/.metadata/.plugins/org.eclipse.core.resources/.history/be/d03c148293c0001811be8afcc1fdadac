@@ -1,0 +1,17 @@
+package Binarios;
+
+import java.io.IOException;
+import javax.sound.midi.Synthesizer;
+
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
+
+public class Ejercicio6 {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+	
+}

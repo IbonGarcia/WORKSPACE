@@ -1,0 +1,5 @@
+package Visual;
+
+public class Ventana_Principal extends JFrame{
+
+}

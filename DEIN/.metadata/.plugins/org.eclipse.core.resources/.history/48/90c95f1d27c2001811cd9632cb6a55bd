@@ -1,0 +1,13 @@
+package tanda2;
+
+public class Ejercicio3c {
+
+	
+	public Ejercicio3c() {
+		
+	}
+	
+	public static void main(String[] args) {
+		Ejercicio3c= new Ejercicio3c();
+	}
+}
